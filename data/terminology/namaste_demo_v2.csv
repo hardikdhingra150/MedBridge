@@ -1,0 +1,13 @@
+code,display,devanagari,category,definition,synonyms
+DEMO-NAM-001,Amlapitta,अम्लपित्त,Digestive,Demonstration concept for acid-related digestive discomfort,"amlapitta|amlpit|acidity"
+DEMO-NAM-002,Jwara,ज्वर,Systemic,Demonstration concept for fever-like systemic illness,"jwara|jwar|fever"
+DEMO-NAM-003,Ama,आम,Traditional Concept,Demonstration traditional concept describing metabolic residue,"ama|metabolic residue"
+DEMO-NAM-004,Aruchi,अरुचि,Digestive,Demonstration concept for loss of appetite,"aruchi|loss of appetite"
+DEMO-NAM-005,Kasa,कास,Respiratory,Demonstration concept for cough,"kasa|cough"
+DEMO-NAM-006,Shwasa,श्वास,Respiratory,Demonstration concept for difficult breathing,"shwasa|breathlessness|dyspnea"
+DEMO-NAM-007,Ajirna,अजीर्ण,Digestive,Demonstration concept for indigestion,"ajirna|indigestion|dyspepsia"
+DEMO-NAM-008,Atisara,अतिसार,Digestive,Demonstration unmapped concept for frequent loose stools,"atisara|diarrhea|loose stools"
+DEMO-NAM-009,Chardi,छर्दि,Digestive,Demonstration unmapped concept for vomiting,"chardi|vomiting|emesis"
+DEMO-NAM-010,Pandu,पाण्डु,Systemic,Demonstration unmapped concept for pallor and weakness,"pandu|pallor|weakness"
+DEMO-NAM-011,Nidranasha,निद्रानाश,Neurological,Demonstration unmapped concept for disturbed sleep,"nidranasha|insomnia|sleeplessness"
+DEMO-NAM-012,Sandhivata,सन्धिवात,Musculoskeletal,Demonstration unmapped concept for joint pain and stiffness,"sandhivata|joint pain|stiffness"

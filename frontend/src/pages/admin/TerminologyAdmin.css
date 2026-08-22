@@ -1,0 +1,460 @@
+.terminology-admin-page {
+  background:
+    radial-gradient(circle at 85% 8%, rgba(73, 111, 107, 0.1), transparent 26%),
+    #0b0907;
+}
+
+.terminology-admin-content {
+  min-width: 0;
+  padding: 48px;
+}
+
+.terminology-admin-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 38px;
+}
+
+.terminology-admin-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.terminology-admin-header > div > span,
+.terminology-section-heading span {
+  color: var(--brass);
+  font-family: var(--mono);
+  font-size: 7px;
+  letter-spacing: 0.15em;
+}
+
+.terminology-admin-header h1 {
+  margin-top: 10px;
+  font-family: var(--serif);
+  font-size: clamp(3.2rem, 6vw, 5.4rem);
+  font-weight: 500;
+  line-height: 0.9;
+}
+
+.terminology-admin-header h1 em {
+  display: block;
+  color: var(--brass-light);
+  font-weight: 400;
+}
+
+.terminology-admin-header p {
+  max-width: 680px;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.75;
+}
+
+.terminology-admin-security {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding: 11px 13px;
+  border: 1px solid rgba(117, 141, 94, 0.35);
+  color: var(--green);
+  font-family: var(--mono);
+  font-size: 7px;
+  letter-spacing: 0.12em;
+}
+
+.terminology-admin-message {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 20px;
+  padding: 13px 15px;
+  font-size: 10px;
+}
+
+.terminology-admin-message.error {
+  border: 1px solid rgba(159, 73, 54, 0.45);
+  background: rgba(159, 73, 54, 0.08);
+  color: #d08b79;
+}
+
+.terminology-admin-message.success {
+  border: 1px solid rgba(117, 141, 94, 0.45);
+  background: rgba(117, 141, 94, 0.08);
+  color: #a7bd91;
+}
+
+.terminology-admin-loading {
+  min-height: 300px;
+  display: grid;
+  place-items: center;
+  gap: 12px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 9px;
+}
+
+.admin-spinner {
+  animation: terminology-spin 0.9s linear infinite;
+}
+
+.coverage-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 11px;
+  margin-bottom: 24px;
+}
+
+.coverage-grid article {
+  min-height: 112px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 17px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.014);
+}
+
+.coverage-grid span {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 7px;
+  text-transform: uppercase;
+}
+
+.coverage-grid strong {
+  color: var(--brass-light);
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.terminology-import-panel,
+.release-group,
+.import-report-section {
+  margin-top: 22px;
+  padding: 25px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.012);
+}
+
+.terminology-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.terminology-section-heading h2 {
+  margin-top: 5px;
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.terminology-section-heading svg {
+  color: var(--brass);
+}
+
+.terminology-import-panel form {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr 1.3fr 1.4fr auto;
+  align-items: end;
+  gap: 11px;
+}
+
+.terminology-import-panel label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 7px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.terminology-import-panel input,
+.terminology-import-panel select {
+  width: 100%;
+  min-height: 43px;
+  padding: 0 11px;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  background: #0b0907;
+  color: var(--text);
+  outline: none;
+  font-family: var(--sans);
+  font-size: 10px;
+}
+
+.terminology-import-panel input[type="file"] {
+  padding: 10px;
+}
+
+.terminology-import-panel button,
+.release-actions button {
+  min-height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 15px;
+  border: 1px solid var(--brass-dark);
+  background: rgba(185, 139, 66, 0.08);
+  color: var(--brass-light);
+  font-size: 9px;
+}
+
+.terminology-import-panel button:disabled,
+.release-actions button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.terminology-import-panel > small {
+  display: block;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 8px;
+}
+
+.release-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.release-card {
+  border: 1px solid var(--border);
+  background: #0b0907;
+}
+
+.release-card-main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+.release-card-main span {
+  color: var(--brass);
+  font-family: var(--mono);
+  font-size: 7px;
+}
+
+.release-card-main h3 {
+  margin-top: 6px;
+  font-family: var(--serif);
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.release-card-main p {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.release-status {
+  padding: 7px 9px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 6px;
+  letter-spacing: 0.1em;
+}
+
+.release-status.active {
+  border-color: rgba(117, 141, 94, 0.45);
+  background: rgba(117, 141, 94, 0.08);
+  color: #a7bd91;
+}
+
+.release-metadata {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 14px 20px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 8px;
+}
+
+.release-metadata strong {
+  color: var(--text);
+}
+
+.release-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 14px 20px;
+}
+
+.release-actions .activate-release {
+  border-color: rgba(117, 141, 94, 0.45);
+  background: rgba(117, 141, 94, 0.08);
+  color: #a7bd91;
+}
+
+.release-terms {
+  max-height: 330px;
+  overflow: auto;
+  border-top: 1px solid var(--border);
+}
+
+.release-terms > div {
+  display: grid;
+  grid-template-columns: 130px 1fr 1fr;
+  gap: 14px;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border);
+  font-size: 9px;
+}
+
+.release-terms code {
+  color: var(--brass-light);
+}
+
+.release-terms span {
+  color: var(--muted);
+}
+
+.import-report-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.import-report-list > p {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.import-report-list article {
+  display: grid;
+  grid-template-columns: 1.2fr auto 1fr;
+  align-items: center;
+  gap: 18px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  background: #0b0907;
+}
+
+.import-report-list article > div:first-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.import-report-list article span,
+.import-report-list article small {
+  color: var(--muted);
+  font-size: 8px;
+}
+
+.import-report-list article > div:first-child > span {
+  color: var(--brass);
+  font-family: var(--mono);
+  font-size: 7px;
+}
+
+.import-report-list article > div:first-child > strong {
+  margin: 4px 0;
+  font-family: var(--serif);
+  font-size: 18px;
+}
+
+.job-status {
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 6px;
+}
+
+.job-status.completed {
+  border-color: rgba(117, 141, 94, 0.4);
+  color: #a7bd91;
+}
+
+.job-status.failed {
+  border-color: rgba(159, 73, 54, 0.4);
+  color: #d08b79;
+}
+
+.job-counts {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.job-counts span {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.job-counts strong {
+  color: var(--text);
+  font-size: 14px;
+}
+
+.import-report-list ul {
+  grid-column: 1 / -1;
+  padding: 11px 15px 11px 30px;
+  border-top: 1px solid var(--border);
+  color: #d08b79;
+  font-size: 8px;
+}
+
+@media (max-width: 1200px) {
+  .coverage-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .terminology-import-panel form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .release-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .terminology-admin-content {
+    padding: 28px 18px;
+  }
+
+  .terminology-admin-header {
+    flex-direction: column;
+  }
+
+  .coverage-grid,
+  .terminology-import-panel form {
+    grid-template-columns: 1fr;
+  }
+
+  .release-metadata,
+  .release-terms > div,
+  .import-report-list article {
+    grid-template-columns: 1fr;
+  }
+
+  .job-counts {
+    justify-content: flex-start;
+  }
+}

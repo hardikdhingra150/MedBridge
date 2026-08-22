@@ -1,0 +1,19 @@
+.audit-page { padding: 46px; }
+.audit-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; }
+.audit-header span, .audit-filters label { color: var(--brass-light); font: 8px var(--mono); letter-spacing: .12em; }
+.audit-header h1 { margin: 6px 0; font: 500 42px var(--serif); }
+.audit-header p { color: var(--muted); font-size: 11px; }
+.audit-header button { display: flex; gap: 8px; align-items: center; padding: 10px 14px; border: 1px solid var(--border); background: transparent; color: var(--parchment); }
+.audit-filters { display: flex; align-items: end; gap: 16px; margin-top: 34px; padding: 16px; border: 1px solid var(--border); }
+.audit-filters label { display: flex; flex-direction: column; gap: 7px; }
+.audit-filters select, .audit-filters input { min-width: 210px; padding: 10px; border: 1px solid var(--border); background: #0b0c0a; color: var(--parchment); }
+.audit-filters strong { margin-left: auto; padding-bottom: 10px; color: var(--muted); font: 8px var(--mono); }
+.audit-table-wrap { position: relative; overflow: auto; min-height: 240px; margin-top: 16px; border: 1px solid var(--border); }
+.audit-table { width: 100%; border-collapse: collapse; font-size: 9px; }
+.audit-table th { padding: 13px; text-align: left; color: var(--muted); font: 7px var(--mono); letter-spacing: .1em; }
+.audit-table td { max-width: 320px; padding: 14px 13px; border-top: 1px solid var(--border); vertical-align: top; overflow-wrap: anywhere; }
+.audit-table td small { display: block; margin-top: 4px; color: var(--muted); font: 6px var(--mono); }
+.audit-action { display: inline-flex; align-items: center; gap: 6px; color: var(--green); font-family: var(--mono); }
+.audit-loading, .audit-empty { padding: 48px !important; text-align: center !important; color: var(--muted); }
+.audit-error { margin-top: 15px; padding: 12px; border: 1px solid #6e3232; color: #e5a2a2; }
+@media (max-width: 900px) { .audit-page { padding: 24px 16px; } .audit-header, .audit-filters { align-items: stretch; flex-direction: column; } .audit-filters strong { margin-left: 0; } }

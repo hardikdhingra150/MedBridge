@@ -1,0 +1,1030 @@
+.review-page {
+    min-height: 100vh;
+
+    background:
+      radial-gradient(
+        circle at 15% 10%,
+        rgba(185, 139, 66, 0.08),
+        transparent 30%
+      ),
+      #090806;
+
+    color: var(--text);
+  }
+
+  .review-topbar {
+    height: 76px;
+
+    display: grid;
+
+    grid-template-columns:
+      1fr auto 1fr;
+
+    align-items: center;
+
+    padding: 0 4%;
+
+    border-bottom:
+      1px solid var(--border);
+
+    background:
+      rgba(9, 8, 6, 0.9);
+
+    backdrop-filter:
+      blur(18px);
+  }
+
+  .review-back {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: var(--muted);
+
+    font-size: 10px;
+  }
+
+  .review-brand {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+  }
+
+  .review-logo {
+    width: 37px;
+    height: 37px;
+
+    display: grid;
+    place-items: center;
+
+    border:
+      1px solid var(--brass-dark);
+
+    color:
+      var(--brass-light);
+
+    font-family:
+      var(--serif);
+
+    font-size: 19px;
+  }
+
+  .review-brand > div:last-child {
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  .review-brand strong {
+    font-family:
+      var(--serif);
+
+    letter-spacing:
+      0.08em;
+  }
+
+  .review-brand span {
+    color: var(--muted);
+
+    font-family:
+      var(--mono);
+
+    font-size: 6px;
+
+    letter-spacing:
+      0.14em;
+  }
+
+  .review-role {
+    justify-self: end;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--green);
+
+    font-family:
+      var(--mono);
+
+    font-size: 7px;
+
+    letter-spacing:
+      0.12em;
+  }
+
+  .review-container {
+    width:
+      min(1180px, 90%);
+
+    margin: auto;
+
+    padding:
+      70px 0 120px;
+  }
+
+  .review-intro {
+    display: flex;
+
+    justify-content:
+      space-between;
+
+    align-items:
+      flex-end;
+
+    gap: 40px;
+
+    margin-bottom: 45px;
+  }
+
+  .review-eyebrow {
+    color: var(--brass);
+
+    font-family:
+      var(--mono);
+
+    font-size: 8px;
+
+    letter-spacing:
+      0.16em;
+  }
+
+  .review-intro h1 {
+    margin-top: 12px;
+
+    font-family:
+      var(--serif);
+
+    font-size:
+      clamp(3.2rem, 6vw, 5.5rem);
+
+    line-height: 0.9;
+
+    font-weight: 500;
+  }
+
+  .review-intro h1 em {
+    display: block;
+
+    color:
+      var(--brass-light);
+
+    font-weight: 400;
+  }
+
+  .review-intro p {
+    max-width: 620px;
+
+    margin-top: 22px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    line-height: 1.8;
+  }
+
+  .review-count {
+    min-width: 105px;
+
+    padding: 18px;
+
+    border:
+      1px solid var(--border);
+
+    text-align: center;
+  }
+
+  .review-count span {
+    display: block;
+
+    color: var(--muted);
+
+    font-family:
+      var(--mono);
+
+    font-size: 7px;
+  }
+
+  .review-count strong {
+    display: block;
+
+    margin-top: 5px;
+
+    color:
+      var(--brass-light);
+
+    font-family:
+      var(--serif);
+
+    font-size: 34px;
+  }
+
+  .candidate-generator {
+    display: flex;
+
+    align-items: center;
+
+    justify-content:
+      space-between;
+
+    gap: 25px;
+
+    padding: 22px;
+
+    border:
+      1px solid var(--border);
+
+    background:
+      rgba(255,255,255,0.015);
+
+    margin-bottom: 25px;
+  }
+
+  .candidate-generator > div:first-child {
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  .candidate-generator span {
+    color: var(--muted);
+
+    font-family:
+      var(--mono);
+
+    font-size: 7px;
+
+    letter-spacing:
+      0.13em;
+  }
+
+  .candidate-generator strong {
+    margin-top: 4px;
+
+    font-family:
+      var(--serif);
+
+    font-size: 19px;
+  }
+
+  .candidate-generator-controls {
+    display: flex;
+
+    gap: 9px;
+  }
+
+  .candidate-generator-controls input {
+    width: 210px;
+
+    padding: 0 13px;
+
+    border:
+      1px solid var(--border);
+
+    background: transparent;
+
+    color: var(--text);
+
+    outline: none;
+
+    font-family:
+      var(--mono);
+
+    font-size: 9px;
+  }
+
+  .candidate-generator-controls button {
+    min-height: 43px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 0 15px;
+
+    border:
+      1px solid var(--brass-dark);
+
+    background:
+      rgba(185,139,66,0.09);
+
+    color:
+      var(--brass-light);
+  }
+
+  .review-spinner {
+    animation:
+      review-spin
+      .8s linear infinite;
+  }
+
+  @keyframes review-spin {
+    to {
+      transform:
+        rotate(360deg);
+    }
+  }
+
+  .review-message {
+    margin-bottom: 20px;
+
+    padding: 13px 15px;
+
+    font-size: 9px;
+
+    border-left:
+      2px solid;
+  }
+
+  .review-error {
+    color: #cf7c64;
+
+    border-color: #cf7c64;
+
+    background:
+      rgba(159,73,54,0.06);
+  }
+
+  .review-success {
+    color: var(--green);
+
+    border-color:
+      var(--green);
+
+    background:
+      rgba(117,141,94,0.06);
+  }
+
+  .review-empty {
+    min-height: 300px;
+
+    display: grid;
+
+    place-items: center;
+
+    align-content: center;
+
+    gap: 10px;
+
+    border:
+      1px solid var(--border);
+
+    color: var(--muted);
+
+    text-align: center;
+  }
+
+  .review-empty svg {
+    color: var(--brass);
+  }
+
+  .review-empty h2 {
+    font-family:
+      var(--serif);
+
+    font-size: 26px;
+
+    color: var(--text);
+  }
+
+  .review-empty p {
+    font-size: 9px;
+  }
+
+  .candidate-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+  }
+
+  .best-candidate-summary {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 25px;
+    padding: 20px 22px;
+
+    border:
+      1px solid
+      rgba(117,141,94,.58);
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(117,141,94,.12),
+        rgba(117,141,94,.035)
+      );
+  }
+
+  .best-candidate-icon {
+    width: 46px;
+    height: 46px;
+
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border:
+      1px solid
+      rgba(117,141,94,.5);
+
+    color: var(--green);
+  }
+
+  .best-candidate-summary > div:last-child {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .best-candidate-summary span {
+    color: var(--green);
+
+    font-family: var(--mono);
+    font-size: 7px;
+
+    letter-spacing: .14em;
+  }
+
+  .best-candidate-summary strong {
+    margin-top: 6px;
+
+    font-family: var(--serif);
+    font-size: 24px;
+
+    font-weight: 500;
+  }
+
+  .best-candidate-summary p {
+    margin-top: 6px;
+
+    color: var(--muted);
+
+    font-size: 9px;
+    line-height: 1.6;
+  }
+
+  .candidate-card {
+    border:
+      1px solid var(--border);
+
+    background:
+      rgba(255,255,255,0.014);
+
+    overflow: hidden;
+  }
+
+  .candidate-card-best {
+    border-color:
+      rgba(117,141,94,.72);
+
+    box-shadow:
+      0 0 0 1px
+      rgba(117,141,94,.12);
+  }
+
+  .candidate-card-top {
+    min-height: 61px;
+
+    display: flex;
+    align-items: center;
+
+    justify-content:
+      space-between;
+
+    padding: 0 22px;
+
+    border-bottom:
+      1px solid var(--border);
+  }
+
+  .candidate-card-top > div:first-child {
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  .candidate-card-top span {
+    color: var(--muted);
+
+    font-family:
+      var(--mono);
+
+    font-size: 7px;
+  }
+
+  .candidate-card-top strong {
+    margin-top: 3px;
+
+    font-family:
+      var(--serif);
+
+    font-size: 18px;
+  }
+
+  .candidate-status {
+    padding: 6px 9px;
+
+    border: 1px solid;
+
+    font-family:
+      var(--mono);
+
+    font-size: 7px;
+  }
+
+  .candidate-card-badges {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+  }
+
+  .candidate-best-match {
+    min-height: 29px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 0 10px;
+
+    border:
+      1px solid
+      rgba(117,141,94,.55);
+
+    background:
+      rgba(117,141,94,.1);
+
+    color: var(--green);
+
+    font-family: var(--mono);
+    font-size: 7px;
+
+    letter-spacing: .08em;
+  }
+
+  .candidate-status-pending {
+    color:
+      var(--brass-light);
+
+    border-color:
+      var(--brass-dark);
+  }
+
+  .candidate-status-approved {
+    color: var(--green);
+
+    border-color:
+      rgba(117,141,94,.45);
+  }
+
+  .candidate-status-rejected {
+    color: #cf7c64;
+
+    border-color:
+      rgba(207,124,100,.45);
+  }
+
+  .candidate-map {
+    display: grid;
+
+    grid-template-columns:
+      1fr 140px 1fr;
+
+    align-items: stretch;
+
+    min-height: 210px;
+  }
+
+  .candidate-source,
+  .candidate-target {
+    padding: 32px;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-direction: column;
+  }
+
+  .candidate-source {
+    background:
+      linear-gradient(
+        145deg,
+        #d3bc91,
+        #bba274
+      );
+
+    color: var(--ink);
+  }
+
+  .candidate-target {
+    background:
+      linear-gradient(
+        145deg,
+        #10201e,
+        #172a27
+      );
+
+    color: #dbe7e3;
+  }
+
+  .candidate-source > span,
+  .candidate-target > span {
+    font-family:
+      var(--mono);
+
+    font-size: 7px;
+
+    opacity: .58;
+  }
+
+  .candidate-map h3 {
+    margin-top: 13px;
+
+    font-family:
+      var(--serif);
+
+    font-size: 29px;
+
+    font-weight: 500;
+  }
+
+  .candidate-map code {
+    margin-top: 12px;
+
+    font-family:
+      var(--mono);
+
+    font-size: 9px;
+  }
+
+  .candidate-map small,
+  .candidate-explanation small {
+    margin-top: 7px;
+    color: inherit;
+    opacity: 0.62;
+    font-family: var(--mono);
+    font-size: 6px;
+  }
+
+  .candidate-arrow {
+    display: flex;
+
+    align-items: center;
+
+    justify-content:
+      center;
+
+    gap: 9px;
+  }
+
+  .candidate-arrow span {
+    flex: 1;
+
+    height: 1px;
+
+    background:
+      linear-gradient(
+        90deg,
+        var(--brass),
+        var(--clinical)
+      );
+  }
+
+  .candidate-arrow svg {
+    color:
+      var(--brass-light);
+  }
+
+  .candidate-scores {
+    display: grid;
+
+    grid-template-columns:
+      2fr 1fr 1fr;
+
+    border-top:
+      1px solid var(--border);
+
+    border-bottom:
+      1px solid var(--border);
+  }
+
+  .candidate-scores > div {
+    padding: 18px 21px;
+
+    border-right:
+      1px solid var(--border);
+  }
+
+  .candidate-scores > div:last-child {
+    border-right: 0;
+  }
+
+  .candidate-scores span {
+    display: block;
+
+    color: var(--muted);
+
+    font-family:
+      var(--mono);
+
+    font-size: 6px;
+
+    letter-spacing:
+      .12em;
+  }
+
+  .candidate-scores strong {
+    display: block;
+
+    margin-top: 5px;
+
+    color:
+      var(--brass-light);
+
+    font-family:
+      var(--mono);
+
+    font-size: 13px;
+  }
+
+  .review-score-bar {
+    height: 2px;
+
+    margin-top: 10px;
+
+    background:
+      rgba(255,255,255,.08);
+  }
+
+  .review-score-bar span {
+    height: 100%;
+
+    display: block;
+
+    background:
+      linear-gradient(
+        90deg,
+        var(--brass),
+        var(--clinical)
+      );
+  }
+
+  .candidate-explanation {
+    display: flex;
+
+    gap: 12px;
+
+    padding: 20px 22px;
+
+    border-bottom:
+      1px solid var(--border);
+
+    background:
+      rgba(185,139,66,.025);
+  }
+
+  .candidate-explanation svg {
+    color: var(--brass);
+
+    flex-shrink: 0;
+  }
+
+  .candidate-explanation span {
+    color: var(--muted);
+
+    font-family:
+      var(--mono);
+
+    font-size: 6px;
+
+    letter-spacing:
+      .13em;
+  }
+
+  .candidate-explanation p {
+    margin-top: 5px;
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    line-height: 1.7;
+  }
+
+  .candidate-review {
+    padding: 22px;
+  }
+
+  .reviewer-inputs {
+    display: grid;
+
+    grid-template-columns:
+      1fr;
+
+    gap: 15px;
+  }
+
+  .reviewer-inputs > div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+  }
+
+  .reviewer-inputs label {
+    color: var(--muted);
+
+    font-family:
+      var(--mono);
+
+    font-size: 7px;
+  }
+
+  .reviewer-inputs input,
+  .reviewer-inputs textarea {
+    border:
+      1px solid var(--border);
+
+    background:
+      rgba(255,255,255,.015);
+
+    color: var(--text);
+
+    outline: none;
+
+    padding: 11px;
+
+    font-size: 9px;
+  }
+
+  .reviewer-inputs textarea {
+    min-height: 75px;
+
+    resize: vertical;
+  }
+
+  .review-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 9px;
+
+    margin-top: 18px;
+  }
+
+  .review-actions button {
+    min-height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 0 16px;
+  }
+
+  .reject-candidate {
+    border:
+      1px solid
+      rgba(207,124,100,.4);
+
+    background: transparent;
+
+    color: #cf7c64;
+  }
+
+  .approve-candidate {
+    border:
+      1px solid
+      rgba(117,141,94,.5);
+
+    background:
+      rgba(117,141,94,.08);
+
+    color: var(--green);
+  }
+
+  .candidate-reviewed {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 17px 22px;
+
+    font-size: 9px;
+  }
+
+  .approved-review {
+    color: var(--green);
+
+    background:
+      rgba(117,141,94,.05);
+  }
+
+  .rejected-review {
+    color: #cf7c64;
+
+    background:
+      rgba(159,73,54,.05);
+  }
+
+  @media (max-width: 800px) {
+    .review-topbar {
+      grid-template-columns:
+        auto 1fr;
+
+      gap: 15px;
+    }
+
+    .review-role {
+      display: none;
+    }
+
+    .review-brand {
+      justify-self: end;
+    }
+
+    .review-intro {
+      align-items:
+        flex-start;
+
+      flex-direction:
+        column;
+    }
+
+    .candidate-generator {
+      flex-direction:
+        column;
+
+      align-items:
+        stretch;
+    }
+
+    .candidate-generator-controls {
+      flex-direction:
+        column;
+    }
+
+    .candidate-generator-controls input {
+      width: 100%;
+
+      min-height: 43px;
+    }
+
+    .candidate-map {
+      grid-template-columns:
+        1fr;
+    }
+
+    .best-candidate-summary {
+      align-items: flex-start;
+    }
+
+    .candidate-card-top {
+      align-items: flex-start;
+      flex-direction: column;
+
+      gap: 12px;
+
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    .candidate-card-badges {
+      flex-wrap: wrap;
+    }
+
+    .candidate-arrow {
+      min-height: 70px;
+    }
+
+    .candidate-scores,
+    .reviewer-inputs {
+      grid-template-columns:
+        1fr;
+    }
+  }
